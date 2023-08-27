@@ -1,0 +1,21 @@
+import java.util.*;
+public class MinMax {
+    public static int getLargest(int[] numbers){
+        int largest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
+        for (int i : numbers) {
+            if (largest < i) {
+                largest = i;
+            }
+            if (smallest > i) {
+                smallest = i;
+            }
+        }
+        return largest;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1,2,3,4,5,50};
+        System.out.println(getLargest(numbers));
+    }
+}
